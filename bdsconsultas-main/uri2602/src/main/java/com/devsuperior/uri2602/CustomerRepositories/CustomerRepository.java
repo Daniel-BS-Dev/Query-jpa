@@ -16,12 +16,12 @@ public interface CustomerRepository extends JpaRepository<Customer, Long>{
 	// consulta em SQL buscar name de pessoas que moram no 'RS'
 
 	@Query(nativeQuery=true, value="SELECT name FROM customers "
-			+ "WHERE UPPER(state) = UPPER('RS')")
-	List<CustomerProjection> search(String name);
+			+ "WHERE UPPER(state) = UPPER(:state)")  // :state é para referencia minha string que vem na lista
+	List<CustomerProjection> search(String state);
 	
-	//a mesma pesquisa em jpql
-	@Query("SELECT new com.devsuperior.uri2602.dto.CustomerDTO(obj.name) "
-			+ "FROM Customer obj "
-			+ "WHERE UPPER(state) = UPPER('RS')")
-	List<CustomerDTO> search1(String name);
+	//a mesma pesquisa em jpql                                                
+	@Query("SELECT new com.devsuperior.uri2602.dto.CustomerDTO(obj.name) "// name atributo que vm da minha classe eu tenho que ter um construtor no dto que recebe esse nome
+			+ "FROM Customer obj "                                        // Customer nome da minha classe
+			+ "WHERE UPPER(state) = UPPER(:state)")                       // obj apelido da minha classe
+	List<CustomerDTO> search1(String state);                              // new com.devsuperior.uri2602.dto.CustomerDTO é o import do dto 
 }
