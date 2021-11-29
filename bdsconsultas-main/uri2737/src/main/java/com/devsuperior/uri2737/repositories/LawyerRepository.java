@@ -10,7 +10,7 @@ import com.devsuperior.uri2737.projections.LawyerMinProjection;
 
 public interface LawyerRepository extends JpaRepository<Lawyer, Long> {
 	
-	// consulta retornando menor, maior e a media de todos
+	// consulta retornando menor, maior e a media de todos, como eu estou usando union e jpql não tem 
 	
 	@Query(nativeQuery=true, value="(SELECT name, customers_number AS customersNumber FROM lawyers "// como meu customers_number e separado pelo _ entao eu precisei dar esse apelido a ele" AS customersNumber"
 			+ "WHERE customers_number = (SELECT MAX(customers_number) FROM lawyers )) "
