@@ -13,7 +13,7 @@ import com.devsuperior.uri2611.projections.MoviesProjection;
 @Repository
 public interface MoviesRepository extends JpaRepository<Movie, Long> {
 	
-// consulta retornando o nome e id dos filmes relacionados a genero recebo pelo usuario
+// consulta retornando o nome e id dos filmes relacionados a genero recebido pelo usuario
 
 	@Query(nativeQuery=true, value="SELECT m.id, m.name FROM movies m "
 			+ "INNER JOIN genres g "

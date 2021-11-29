@@ -13,6 +13,8 @@ import com.devsuperior.uri2621.projections.ProductProjection;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	
+	// consulta que retorna o nome do produto que esteja entre o min e o max que a inicial letra name
+	
 	@Query(nativeQuery=true, value="SELECT prod.name FROM products prod "
 			+ "JOIN providers prov ON prov.id = prod.id_providers "
 			+ "WHERE prod.amount BETWEEN :min AND :max AND prov.name LIKE CONCAT(:name, '%')")

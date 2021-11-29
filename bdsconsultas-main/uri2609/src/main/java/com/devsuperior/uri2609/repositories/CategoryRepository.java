@@ -13,6 +13,8 @@ import com.devsuperior.uri2609.projections.CategorySumProjection;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 	
+	//CONSULTA QUE VOLTAR O NOME DA CATEGORIA E A SOMA DE PRODUTOS EM CADA CATEGORIA
+	
 	@Query(nativeQuery=true, value="SELECT ca.name, sum(pr.amount) FROM categories ca "
 			+ "join products pr on ca.id = pr.id_categories "
 			+ "group by ca.name")
