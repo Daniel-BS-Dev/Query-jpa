@@ -2,7 +2,8 @@
 
 ## sobre 
 
-   consultation-jpa são algumas consultas feitas no banco de dados usando o SQL e o JPQL 
+   consultation-jpa são algumas consultas feitas no banco de dados usando o SQL e o JPQL
+  
 
 ## Ferramentas utilizadas
 
@@ -13,6 +14,12 @@
    * Postgres
    * PgMyAdmin
    * Versão do maven 2.4.4
+
+ ## Links
+
+- Referências : https://www.w3schools.com/sql/default.asp
+- Exercícios : https://urionlinejudge.com.br/
+
 
 ## Estudos de caso
 
