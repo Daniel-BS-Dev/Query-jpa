@@ -1,8 +1,8 @@
-# consultation-jpa
+# Query-jpa
 
 ## sobre 
 
-   consultation-jpa são algumas consultas feitas no banco de dados usando o SQL e o JPQL
+   Query-jpa são algumas consultas feitas no banco de dados usando o SQL e o JPQL
   
 
 ## Ferramentas utilizadas
